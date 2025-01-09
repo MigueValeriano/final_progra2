@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [NgClass, BtnComponent, RouterLink, NgIf, NgFor],
+  imports: [RouterLink],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })

@@ -10,10 +10,8 @@ import { CardComponent } from '../../components/card/card.component';
   standalone: true,
   imports: [
     RouterLink,
-    CardComponent,
-    NgFor,
     CommonModule
-  ],
+],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.scss'
 })

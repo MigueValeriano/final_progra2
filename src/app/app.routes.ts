@@ -10,13 +10,15 @@ import { ViewProfileComponent } from './pages/view-profile/view-profile.componen
 import { HomeComponent } from './pages/home/home.component';
 import { EventoComponent } from './pages/evento/evento.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
+import { EventsComponent } from './pages/events/events.component';
+import { EventsFormComponent } from './pages/events-form/events-form.component';
 
 
 
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile/:id', component: ProfileComponent },
   { path: 'home', component: HomeComponent},
   { path: 'search', component: SearchComponent },
   { path: 'register', component: RegisterComponent },
@@ -26,5 +28,8 @@ export const routes: Routes = [
   { path: 'view-post/:identificador', component: NewPostComponent },
   { path: 'view-profile/:id', component: ViewProfileComponent },
   { path: 'carrito', component: CarritoComponent},
-  { path: 'evento/:id', component: EventoComponent }
+  { path: 'evento/:id', component: EventoComponent },
+  { path: 'events', component: EventsComponent },
+  { path: 'events-form/create', component: EventsFormComponent},
+  { path: 'events-form/:action/:id', component: EventsFormComponent},  
 ];

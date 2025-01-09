@@ -7,8 +7,8 @@ import { CommonModule, NgFor } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ CommonModule,
-    RouterLink, RouterOutlet, CardComponent, BtnComponent, MessageComponent],
+  imports: [CommonModule,
+    RouterLink, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

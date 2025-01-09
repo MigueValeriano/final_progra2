@@ -11,12 +11,10 @@ import { CoreModule } from '../../core.module';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [// HttpClientModule debe estar aquí
-    RouterLink,
+  imports: [
     NgFor,
-    CardComponent,
-    BtnComponent
-  ],
+    CardComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
