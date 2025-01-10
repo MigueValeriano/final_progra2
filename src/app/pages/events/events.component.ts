@@ -14,10 +14,11 @@ export class EventosComponent {
 
   eventos: any;
 pruebas: any;
+consertevents: any;
   constructor(
     public db: DatabaseService
   ) {
-    this.db.fetchFirestoreCollection('pruebas')
+    this.db.fetchFirestoreCollection('consertevents')
       .subscribe((res: any) => {
 
         console.log('eventos del firebase',res);

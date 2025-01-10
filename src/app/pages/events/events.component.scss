@@ -1,3 +1,24 @@
-*{
+td{
     color: black;
+    margin: 20px 0;
+}
+.btn-outline-primary{
+    color: blue !important;
+    border-color: rgb(68, 105, 224) !important;
+}
+.btn-outline-primary:hover  {
+    background-color: cadetblue !important;
+    color: white !important;
+}
+.btn-outline-primary:active  {
+    transform: scale(0.95);
+}
+.table{
+    margin-top: 20px;
+
+}
+.button-crud {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
 }

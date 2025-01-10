@@ -1,24 +1,26 @@
 <h1>Eventos</h1>
 
 <a href="/events-form/create" class="btn btn-primary">Agregar nuevo</a>
-<table class="table-striped table-dark">
-  <thead class="thead-dark">
-    <tr>
-      <td>Nombre</td>
-      <td>Accion</td>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <td>Nombre</td>
+            <td>Copias</td>
+            <td>Accion</td>
 
-    </tr>
-  </thead>
- <tbody>
-  <tr *ngFor="let evento of eventos">
-    <td>{{evento.name}}</td>
-    <td>{{evento.edad}}</td>
-    <td>{{evento.locacion}}</td>
-    <td>
-      <a routerLink="/events-form/read/{{evento.id}}">Ver</a> <br>
-      <a routerLink="/events-form/update/{{evento.id}}">Editar</a> <br>
-      <a routerLink="/events-form/delete/{{evento.id}}">Eliminar</a>
-    </td>
-  </tr>
- </tbody>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let evento of eventos">
+            <td>{{evento.Nombre}}</td>
+            <td>{{evento.cantidad}}</td>
+            <td>
+                <div class="button-crud">
+                    <a routerLink="/events-form/read/{{evento.id}}" class="btn btn-outline-primary">Ver</a> <br>
+                    <a routerLink="/events-form/update/{{evento.id}}" class="btn btn-outline-primary">Editar</a> <br>
+                    <a routerLink="/events-form/delete/{{evento.id}}" class="btn btn-outline-primary">Eliminar</a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
 </table>
