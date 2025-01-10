@@ -4,29 +4,24 @@ import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-events',
+  selector: 'app-eventos',
   standalone: true,
   imports: [NgFor, RouterLink],
   templateUrl: './events.component.html',
-  styleUrls: ['./events.component.scss']
+  styleUrl: './events.component.scss'
 })
-export class EventsComponent {
-  events: any[] = [];
+export class EventosComponent {
 
-  constructor(private db: DatabaseService) {
-    this.fetchEvents();
-  }
+  eventos: any;
+pruebas: any;
+  constructor(
+    public db: DatabaseService
+  ) {
+    this.db.fetchFirestoreCollection('pruebas')
+      .subscribe((res: any) => {
 
-  fetchEvents() {
-    this.db.fetchFirestoreCollection('consertevents')
-      .subscribe({
-        next: (res: any) => {
-          console.log('Colección de Firebase:', res);
-          this.events = res;
-        },
-        error: (err: any) => {
-          console.error('Error al obtener datos de Firebase:', err);
-        }
-      });
+        console.log('eventos del firebase',res);
+        this.eventos = res;
+      })
   }
 }
